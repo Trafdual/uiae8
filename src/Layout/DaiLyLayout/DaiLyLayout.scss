@@ -1,0 +1,240 @@
+.container-daily {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .container-daily2 {
+    margin-bottom: 50px;
+    margin-top: 60px;
+    flex: 1;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+  }
+  
+  .header-daily {
+    position: fixed;
+    width: 450px;
+    height: 60px;
+    background-color: #00a0ff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  .name-daily {
+    font-size: 20px;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  .info {
+    display: flex;
+    height: 30px;
+  }
+  .container-name {
+    position: relative;
+    display: inline-block;
+    height: 30px;
+    overflow: hidden;
+  }
+  
+  .gift {
+    display: block;
+    width: 100%;
+  }
+  
+  .username {
+    position: absolute;
+    color: red;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    pointer-events: none;
+  }
+  
+  .role {
+    background: #054add;
+    padding: 0px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    color: white;
+  }
+  
+  .kimcuong {
+    height: 25px;
+    width: 25px;
+  }
+  
+  .link-section {
+    margin-bottom: 16px;
+  }
+  .link-section h4 {
+    color: #7189ac;
+    text-align: center;
+    margin: 0;
+  }
+  .link-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ececec;
+    padding: 20px 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .link-box span {
+    color: #777272;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: calc(100% - 24px);
+  }
+  
+  .copy-button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
+  .qr-section {
+    background-color: #ececec;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    border-radius: 8px;
+    padding: 15px;
+  }
+  .qr-text-copy {
+    color: #777272;
+    display: flex;
+    font-size: 14px;
+  }
+  .qr-code {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+  }
+  
+  .qr-info p {
+    margin: 0;
+  }
+  
+  .save-qr {
+    margin-top: 8px;
+    background: linear-gradient(45deg, #0077ffc9, #6395ff);
+    border: none;
+    color: #ffffff;
+    border-radius: 15px;
+    padding: 4px 28px;
+    cursor: pointer;
+  }
+  
+  .stats {
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .card {
+    background: linear-gradient(180deg, #0077ffc9, #6395ff);
+    border-radius: 10px;
+    padding: 16px 24px;
+    max-width: 400px;
+    margin: 10px auto;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .card h4 {
+    font-size: 17px;
+  }
+  
+  .table-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+  }
+  
+  .row span {
+    flex: 1;
+    text-align: center;
+    font-size: 13px;
+  }
+  
+  .row span:first-child {
+    text-align: left;
+  }
+  
+  .menu {
+    display: flex;
+    color: #97a7fc;
+    text-align: center;
+    font-size: 0.75rem;
+  }
+  .nhom {
+    display: grid;
+    padding-right: 15px;
+  }
+  .icon-copy {
+    height: 15px;
+    width: 20px;
+  }
+  .icon-gr {
+    background-color: #ececec;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 5px;
+    height: 2.1875rem;
+    width: 2.34375rem;
+  }
+  .menu button {
+    flex: 1;
+    background: #ececec;
+    color: #ffffff;
+    border: none;
+    padding: 8px;
+    margin: 0 4px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .menu button:hover {
+    background: #3b82f6;
+  }
+  
+  @media screen and (min-width: 450px) {
+    body {
+      margin: 0 auto;
+      width: 450px;
+      background-color: gray;
+    }
+  }
+  

@@ -1,0 +1,235 @@
+.container-cskh {
+    background: linear-gradient(to bottom, #d1f7ff, #c9dee6);
+    height: 100vh;
+    padding-bottom: 85px;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow-y: hidden;
+
+  }
+  .container-cskh::-webkit-scrollbar {
+    display: none;
+  }
+  .header-cskh {
+    background: radial-gradient(
+      153.87% 153.87% at 50% -53.87%,
+      rgba(185, 235, 255, 0.88) 8.33%,
+      rgba(211, 243, 255, 0.61) 68.14%,
+      #8bdeff 100%
+    );
+    padding: 10px 10px;
+    color: #fff;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .header-cskh .logo {
+    height: 80px;
+  }
+  
+  .header-cskh .slogan {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  .customer-service img,
+  .high-speed-links img {
+    width: 85%;
+    margin: 20px auto 10px;
+    display: flex;
+    justify-content: center;
+  }
+  .customer-service p {
+    text-align: center;
+    font-size: 14px;
+    color: #08497b;
+  }
+  .services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 0px 25px;
+  }
+  
+  .service {
+    background: #00a1e4;
+    border: 2px solid #00a1e4;
+    border-radius: 25px;
+    text-align: center;
+    padding: 2px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .service:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  }
+  .service-trong {
+    background: #00a1e4;
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+    text-align: center;
+    padding: 5%;
+  }
+  .service-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #00a1e4;
+  }
+  
+  .service-icon img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .service p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+  
+    margin: 0;
+  }
+  
+  .support-platform {
+    margin: 20px 0;
+  }
+  
+  .platform-button {
+    background-color: #0071bf;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .platform-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .platform-icons img {
+    width: 50px;
+  }
+  
+  .high-speed-links h2 {
+    color: #0071bf;
+    font-size: 16px;
+    margin: 20px 0 10px;
+  }
+  
+  .links {
+    margin-bottom: 70px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 0px 25px;
+  }
+  
+  .links button {
+    background-color: #00a1e4;
+    color: #fff;
+    border: 2px solid #ffffff;
+  
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  
+
+  
+
+  .text-sp {
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0px 3.786px 3.786px rgba(0, 0, 0, 0.25);
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+  }
+
+  .product-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .danhsachcskh {
+    display: flex;
+    overflow: hidden;
+  }
+  .icon-cskh {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  .icon-cskh img {
+    width: 20vw;
+    height: 20vw;
+  }
+  .icon-cskh span {
+    font-size: 8px;
+    color: white;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: #00a1e4;
+    width: 75%;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0px 3.786px 3.786px rgba(0, 0, 0, 0.25);
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .arrow {
+    cursor: pointer;
+  }
+  
+  .box-height{
+    height: 100px;
+  }
+  
+  @media screen and (min-width: 450px) {
+    body {
+      margin: 0 auto;
+      width: 450px;
+      background-color: gray;
+      overflow-y: hidden;
+    }
+    .icon-cskh img {
+      width: 85px;
+      height: 85px;
+    }
+    .icon-container {
+      padding: 40px;
+      padding-left: 5px;
+    padding-right: 5px;
+    }
+    .danhsachcskh {
+      gap: 7px;
+    }
+    .icon-cskh span {
+      width: 90%;
+      font-size: 10px;
+      padding: 3px;
+    }
+    .service-trong {
+      padding: 10%;
+    }
+  }
+  

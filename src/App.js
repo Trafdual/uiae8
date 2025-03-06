@@ -1,5 +1,4 @@
 import './App.css'
-import ToastProvider from './component/ToastProvider/ToastContext'
 import { DefaultLayout } from './Layout/DefaultLayout'
 import React, { Fragment } from 'react'
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom'
@@ -7,7 +6,7 @@ import { publicRoutes } from './router'
 
 function App () {
   return (
-    <ToastProvider>
+  
       <Router>
         <div className='App'>
           <Routes>
@@ -32,7 +31,7 @@ function App () {
           </Routes>
         </div>
       </Router>
-    </ToastProvider>
+
   )
 }
 

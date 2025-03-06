@@ -1,0 +1,62 @@
+.footer-trangchu {
+    margin-bottom: 150px;
+    padding-bottom: 65px;
+    padding: 5px;
+  }
+  
+  .imgfooter {
+    width: 100%;
+    height: auto;
+  }
+  .divthuonghieu {
+    color: #00abe5;
+  }
+  .endorser-item {
+    align-items: center;
+    display: flex;
+    font-size: 4vw;
+    justify-content: space-between;
+  }
+  
+  .endorser-item img {
+    width: 25vw;
+  }
+  
+  .footer-license {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4vw;
+  }
+  
+  .footer-title {
+    font-size: 4vw;
+    margin-bottom: 2.5vw;
+    text-transform: capitalize;
+    white-space: nowrap;
+  }
+  
+  .license-list img {
+    height: 12vw;
+  }
+  
+  .sns-list {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .sns-list a img {
+    height: 7vw;
+  }
+  
+  .footer-des {
+    box-sizing: border-box;
+    text-align: justify;
+    color: #3caae2;
+    font-size: 3vw;
+    line-height: 1.2;
+  }
+  
+  .box-height{
+    height: 100px;
+  }

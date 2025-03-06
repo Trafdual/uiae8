@@ -1,0 +1,91 @@
+.headerKhuyenMai {
+  position: fixed;
+  width: 450px;
+  height: 60px;
+  background-color: #00a0ff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.home-icon {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-decoration: none;
+}
+
+.home-icon:hover {
+  color: #bbdefb;
+}
+.header .home-icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.header .back-icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.header .back-icon:hover,
+.header .home-icon:hover {
+  opacity: 0.8;
+}
+.all-promotions {
+
+  background-color: #fda4af;
+  color: #12122b;
+  font-size: 12px;
+  padding: 7px 10px;
+  margin-top: 60px;
+  float: left;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.container-khuyenmai2 {
+  margin-bottom: 50px;
+  height: 100vh;
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+.promotion-card {
+  border-radius: 10px;
+  margin: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.promotion-card img {
+  width: 100%;
+//   height: auto;
+  display: block;
+}
+
+@media screen and (min-width: 450px) {
+  body {
+    margin: 0 auto;
+    width: 450px;
+    background-color: gray;
+  }
+  
+}

@@ -13,7 +13,7 @@ function Footer () {
       <Link to='/khuyenmai'>
         <div class='nav-item'>
           <img
-            src='/'
+            src='/assets/images/khuyenmai.png'
             alt='Khuyến Mãi'
             class='icon'
           />

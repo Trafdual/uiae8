@@ -6,3 +6,38 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
+.marquee-container {
+    width: 100%;
+    display: flex;
+    align-items: center; 
+    background: #f9f9f9; 
+    border: 1px solid #ddd; 
+    overflow: hidden;
+    height: 30px;
+  }
+  
+  .marquee {
+    position: relative;
+    display: flex;
+    gap: 100px;
+    width: max-content;
+    animation: marquee 55s linear infinite;
+    will-change: transform;
+  }
+  
+  .marquee span {
+    display: inline-block;
+    font-size: 14px;
+    white-space: nowrap;
+    color: #007aff; 
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(20%);
+    }
+    100% {
+      transform: translateX(-100%); 
+    }
+  }
+  
