@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import ToastProvider from './component/ToastProvider/ToastContext'
+import { DefaultLayout } from './Layout/DefaultLayout'
+import React, { Fragment } from 'react'
+import { Route, Routes, BrowserRouter as Router } from 'react-router-dom'
+import { publicRoutes } from './router'
 
-function App() {
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ToastProvider>
+      <Router>
+        <div className='App'>
+          <Routes>
+            {publicRoutes.map((route, index) => {
+              let Layout = DefaultLayout
+              const Page = route.component
+              if (route.layout === null) {
+                Layout = Fragment
+              }
+              return (
+                <Route
+                  key={index}
+                  path={route.path}
+                  element={
+                    <Layout>
+                      <Page />
+                    </Layout>
+                  }
+                />
+              )
+            })}
+          </Routes>
+        </div>
+      </Router>
+    </ToastProvider>
+  )
 }
 
-export default App;
+export default App
