@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import "./Notifition.scss"; 
 
 const Notification = ({ message, isVisible, onClose }) => {
@@ -15,7 +15,7 @@ const Notification = ({ message, isVisible, onClose }) => {
   return (
     <div className="notification-container">
       <div className={`notification ${isVisible ? "" : "hidden"}`}>
-        <img src="/assets/images/cskh/iconinfor.png" alt="Info Icon" />
+        <img src="/assets/images/daily/iconinfor.png" alt="Info Icon" />
         <div className="divndnotification">
           <h3>Thông báo</h3>
           <p className="ndnotification">{message}</p>

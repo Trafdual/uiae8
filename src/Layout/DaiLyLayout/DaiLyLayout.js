@@ -1,10 +1,11 @@
-import {React,useState,useEffect } from "react";
+import { React, useState, useEffect, useRef } from "react";
 import "./DaiLyLayout.scss";
 import Notification from "../../component/Notification/Notifition";
 
 const DaiLyLayout = () => {
   const [showNoti, setShowNoti] = useState(false);
   const [notiMessage, setNotiMessage] = useState("");
+  const qrRef = useRef(null); // Dùng useRef để lấy ảnh QR
 
   const handleCopy = (text) => {
     navigator.clipboard.writeText(text).then(() => {
@@ -19,8 +20,19 @@ const DaiLyLayout = () => {
     }
   }, [showNoti]);
 
+  const handleDownloadQR = () => {
+    if (!qrRef.current) return;
+
+    const link = document.createElement("a");
+    link.href = qrRef.current.src;
+
+    link.download = "QR_Code.png";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
-    
+
     <div className="container-daily">
       <Notification
         message={notiMessage}
@@ -28,7 +40,7 @@ const DaiLyLayout = () => {
         onClose={() => setShowNoti(false)}
       />
 
-     
+
       <header className="header-daily">
         <div className="name-daily">Quản lý đại lý</div>
       </header>
@@ -65,18 +77,20 @@ const DaiLyLayout = () => {
             />
           </div>
           <div className="qr-section">
-            <img src="../assets/images/daily/qr.png" alt="QR Code" className="qr-code" />
+            <img src="../assets/images/daily/qr.png" ref={qrRef} alt="QR Code" className="qr-code" />
             <div className="qr-info">
               <div className="qr-text-copy">
                 <p>Mã giới thiệu: <strong className="link-text">59085A</strong></p>
                 <img
-              src="../assets/images/daily/copy.png"
-              alt="Copy Icon"
-              className="icon-copy"
-              onClick={() => handleCopy("59085A")}
-            />
+                  src="../assets/images/daily/copy.png"
+                  alt="Copy Icon"
+                  className="icon-copy"
+                  onClick={() => handleCopy("59085A")}
+                />
               </div>
-              <button className="save-qr">Lưu mã QR</button>
+              <button className="save-qr" onClick={handleDownloadQR}>
+                Lưu mã QR
+              </button>
             </div>
           </div>
         </div>
@@ -121,7 +135,7 @@ const DaiLyLayout = () => {
         </div>
       </div>
 
-    
+
     </div>
   );
 };

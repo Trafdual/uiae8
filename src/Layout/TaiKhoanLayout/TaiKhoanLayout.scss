@@ -1,8 +1,161 @@
-.taikhoan_container {
-    background-color: white;
+.account-container {
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
-}
+  }
+  .account-container::-webkit-scrollbar {
+    display: none;
+  }
+  .account-header {
+    border-radius: 0 0 30px 30px;
+    // background: url("/assets/images/account/van.png") no-repeat center center / cover,
+    //   linear-gradient(180deg, #00aae6, #0084e6);
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 15px;
+    padding: 20px;
+    overflow: hidden;
+  }
+  
+  .account-header a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .account-function {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #000;
+    font-weight: 400;
+  }
+  
+  .function-list {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 30px;
+    width: 80%;
+    border-radius: 10px;
+  }
+  
+  .function-item {
+    flex: 1;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .function-item:active {
+    transform: none;
+  }
+  
+  .function-item:focus {
+    outline: none;
+  }
+  
+  .icon-function {
+    align-items: center;
+    background: #fff;
+    border-radius: 15px;
+    display: flex;
+    font-size: 30px;
+    height: 60px;
+    justify-content: center;
+    margin-bottom: 8px;
+    width: 60px;
+  }
+  
+  .icon-function img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .function-name p {
+    text-align: center;
+    font-size: 13px;
+    margin: 0;
+  }
+  
+  .menu-block {
+    background-color: #fff;
+    border-radius: 30px 30px 0 0;
+    padding: 15px 20px;
+    flex: 1;
+    overflow: auto;
+  }
+  
+  .menu-block-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px #ececec solid;
+    padding: 10px 0;
+    font-size: 15px;
+    color: #000;
+    gap: 10px;
+  }
+  
+  .menu-block-item:last-child {
+    border: none;
+  }
+  
+  .menu-item-icon {
+    width: 30px;
+    height: auto;
+  }
+  
+  .menu-item-name {
+    align-items: center;
+    display: flex;
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  .namedx {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .xu {
+    padding-top: 20px;
+  }
+  .currency {
+    font-size: 14px;
+    margin-bottom: 5px;
+    opacity: 0.6;
+  }
+  .balance {
+    align-items: center;
+    display: flex;
+    font-size: 32px;
+  }
+  .balance img {
+    height: 32px;
+  }
+  
+  @media screen and (min-width: 450px) {
+    body {
+      margin: 0 auto;
+      width: 450px;
+      background-color: gray;
+    }
+    .account-container {
+      margin-bottom: 0;
+    }
+    .menu-block-item {
+      font-size: 16px;
+    }
+  }
+  

@@ -29,14 +29,15 @@
   }
   
   .footer-title {
-    font-size: 4vw;
     margin-bottom: 2.5vw;
     text-transform: capitalize;
     white-space: nowrap;
   }
   
   .license-list img {
-    height: 12vw;
+    width:50px;  
+    height: 50px;
+    object-fit: contain; 
   }
   
   .sns-list {
@@ -46,14 +47,16 @@
   }
   
   .sns-list a img {
-    height: 7vw;
+    width: 40px;   
+    height: 40px;  
+    object-fit: cover; 
   }
+  
   
   .footer-des {
     box-sizing: border-box;
     text-align: justify;
     color: #3caae2;
-    font-size: 3vw;
     line-height: 1.2;
   }
   
