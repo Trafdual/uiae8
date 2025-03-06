@@ -40,4 +40,44 @@
       transform: translateX(-100%); 
     }
   }
+  @media screen and (min-width: 450px) {
+  body {
+    margin: 0 auto;
+    width: 450px;
+    background-color: gray;
+  }
+  .endorser-item,
+  .footer-title,
+  .footer-des {
+    font-size: 15px;
+  }
+  .endorser-item img {
+    width: 100px;
+  }
+  .license-list img {
+    height: 50px;
+  }
+  .sns-list a img {
+    height: 40px;
+  }
+
+  .body,
+  .footer-trangchu {
+    background-color: white;
+  }
+  .footer-trangchu {
+  margin-bottom: 10px;
+  padding-bottom: 155px;
+  }
+  .marquee-container {
+    width: unset !important;
+  }
+  .carousel {
+    margin-top: 40px;
+    background-color: white;
+  }
+  .footer-license {
+    margin-bottom: 20px;
+  }
+}
   

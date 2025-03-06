@@ -30,6 +30,7 @@ const FooterTrangChu = () => {
       />
 
       <div className="divthuonghieu">
+        <p></p>
         <div className="footer-sns">
           <div className="footer-title">Theo dõi chúng tôi</div>
           <div className="sns-list">

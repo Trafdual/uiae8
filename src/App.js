@@ -1,4 +1,3 @@
-import './App.css'
 import { DefaultLayout } from './Layout/DefaultLayout'
 import React, { Fragment } from 'react'
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom'

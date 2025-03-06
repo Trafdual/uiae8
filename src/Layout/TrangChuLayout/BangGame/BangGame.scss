@@ -1,0 +1,40 @@
+.home-globby {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px;
+    height: auto;
+}
+
+.categories {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+    padding: 5px 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #00abe5;
+    font-size: 12px;
+    width: 100%;
+}
+
+.category img {
+    width: 24px;
+    height: 24px;
+}
+
+.category.active {
+    background-color: #00abe5;
+    color: white;
+}
