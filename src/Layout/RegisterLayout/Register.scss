@@ -1,0 +1,176 @@
+.register-container {
+    background: url('../../../public/assets/images/bgrloginregister.jpg') no-repeat center center / cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.register-header {
+    position: relative;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.register-header .btn-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.register-header .btn-close {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.register-header .top-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.register-form {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow: hidden;
+}
+
+.register-input-field {
+    position: relative;
+    text-align: left;
+}
+
+.register-input-field label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 5px;
+    color: #24aae1;
+}
+
+.register-input-field label img {
+    width: 15px;
+
+    max-width: 100%;
+    height: auto;
+}
+
+.register-input-field input {
+    width: 100%;
+    padding: 10px 7px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.register-input-field small {
+    color: #999;
+    margin-top: 5px;
+    display: block;
+}
+
+.register-input-field .toggle-password {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    width: 30px;
+    cursor: pointer;
+    max-width: 100%;
+    height: auto;
+}
+
+.register-input-field .phone-input {
+    display: flex;
+}
+
+.register-input-field .phone-input select {
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    background-color: #efefef;
+    padding: 0 5px;
+}
+
+.register-input-field .phone-input input {
+    border-radius: 0 5px 5px 0;
+}
+
+
+
+.register-terms {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.register-terms input {
+    margin-right: 10px;
+}
+
+.register-terms a {
+    text-decoration: none;
+    color: #00aae6;
+}
+
+.register-term {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.custom-checkbox {
+    display: none;
+}
+
+.checkbox-icon {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #24aae1;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    cursor: pointer;
+    gap: 5px;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: middle;
+}
+
+.custom-checkbox:checked+label .checkbox-icon::after {
+    content: "✔";
+    font-size: 19px;
+    color: #24aae1;
+    line-height: 1;
+    position: relative;
+    top: 0;
+}
+
+.register-term a {
+    text-decoration: none;
+    color: #24aae1;
+}
+
+.register-btn {
+    width: 100%;
+    background: linear-gradient(to bottom, #aed7ea, #0ea5f7);
+    color: #fff;
+    /* border: 2px solid #1a73c5; */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+}

@@ -29,3 +29,17 @@
     cursor: pointer;
     border-radius: 4px;
 }
+.btn_ok{
+    margin-top: 5px;
+    background: linear-gradient(to bottom, #aed7ea, #0ea5f7);
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.captcha-image.selected {
+    border: 2px solid #0ea5f7;
+}

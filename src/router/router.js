@@ -4,10 +4,16 @@ import { CSKHLayout } from '../Layout/CSKHLayout'
 import { DaiLyLayout } from '../Layout/DaiLyLayout'
 import { TaiKhoanLayout } from '../Layout/TaiKhoanLayout'
 import { LoginLayout } from '../Layout/LoginLayout'
+import { RegisterLayout } from '../Layout/RegisterLayout'
 const publicRoutes = [
   {
     path: '/login',
     component: LoginLayout,
+    layout: null
+  },
+  {
+    path: '/register',
+    component: RegisterLayout,
     layout: null
   },
   {
