@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import './Header.scss'
+import { getFromsessionstorage } from '../../../component/MaHoaDuLieu'
 
 const Header = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
-
-
+  const data = JSON.parse(getFromsessionstorage('data_u'))
 
   return (
     <header className='header1'>
@@ -16,27 +15,25 @@ const Header = () => {
         />
       </div>
       <div className='actions' id='actions'>
-        {!isLoggedIn ? (
+        {!data ? (
           <div className='btndkdn' id='btndkdn'>
-            <a>
+            <a href='/register'>
               <button className='btn btn-register'>Đăng Ký</button>
             </a>
-            <a
-             href='/login'
-            >
-              <button className='btn btn-login'>
-                Đăng Nhập
-              </button>
+            <a href='/login'>
+              <button className='btn btn-login'>Đăng Nhập</button>
             </a>
           </div>
         ) : (
           <div className='headerdn' id='headerdn'>
             <div className='rankname'>
               <img src='../assets/images/rankheader.png' alt='' />
-              <div>trafdual</div>
+              <div>{data.username}</div>
             </div>
             <div className='chatxu'>
-              <span>0.00</span>
+              <span>
+                {data.coins === 0 ? '0.00' : data.coins.toLocaleString()}
+              </span>
               <img src='../assets/images/chatheader.png' alt='' />
             </div>
           </div>

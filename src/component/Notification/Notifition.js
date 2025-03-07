@@ -1,34 +1,52 @@
-import { useEffect } from "react";
-import "./Notifition.scss"; 
+import { useEffect, useState } from 'react'
+import './Notifition.scss'
 
 const Notification = ({ message, isVisible, onClose }) => {
+  const [progress, setProgress] = useState(0)
+  const duration = 5000
+
+  const handelclose = () => {
+    setProgress(0)
+    onClose()
+  }
   useEffect(() => {
     if (isVisible) {
-      const timer = setTimeout(() => {
-        onClose();
-      }, 3000); 
+      setProgress(0)
+      let startTime = Date.now()
 
-      return () => clearTimeout(timer);
+      const interval = setInterval(() => {
+        const elapsed = Date.now() - startTime
+        const progressValue = Math.min((elapsed / duration) * 100, 100)
+        setProgress(progressValue)
+
+        if (progressValue >= 100) {
+          clearInterval(interval)
+          setProgress(0)
+          onClose()
+        }
+      }, 50)
+
+      return () => clearInterval(interval)
     }
-  }, [isVisible, onClose]);
+  }, [isVisible, duration, onClose])
 
   return (
-    <div className="notification-container">
-      <div className={`notification ${isVisible ? "" : "hidden"}`}>
-        <img src="/assets/images/daily/iconinfor.png" alt="Info Icon" />
-        <div className="divndnotification">
+    <div className='notification-container'>
+      <div className={`notification ${isVisible ? 'show' : 'hidden'}`}>
+        <img src='/assets/images/daily/iconinfor.png' alt='Info Icon' />
+        <div className='divndnotification'>
           <h3>Thông báo</h3>
-          <p className="ndnotification">{message}</p>
+          <p className='ndnotification'>{message}</p>
         </div>
-        <div className="close-notifi" onClick={onClose}>
+        <div className='close-notifi' onClick={handelclose}>
           x
         </div>
-        <div className="thanhthoigian">
-          <div className="progress-bar"></div>
+        <div className='thanhthoigian'>
+          <div className='progress-bar' style={{ width: `${progress}%` }}></div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Notification;
+export default Notification

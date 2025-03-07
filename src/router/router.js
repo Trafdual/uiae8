@@ -14,6 +14,11 @@ const publicRoutes = [
     layout: null
   },
   {
+    path: '/register',
+    component: RegisterLayout,
+    layout: null
+  },
+  {
     path: '/',
     component: TrangChuLayout
   },
