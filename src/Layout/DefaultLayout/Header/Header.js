@@ -25,10 +25,7 @@ const Header = () => {
               <button className='btn btn-register'>Đăng Ký</button>
             </a>
             <a
-              onClick={e => {
-                e.preventDefault()
-                handleLogin()
-              }}
+             href='/login'
             >
               <button className='btn btn-login'>
                 Đăng Nhập

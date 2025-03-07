@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./TaiKhoanLayout.scss";
 const TaiKhoanLayout = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
-  const username = "ae12123"; // Giả lập tên người dùng
+  const username = "ae12123"; 
 
   const dangxuat = () => {
     setIsLoggedIn(false);
@@ -11,7 +11,6 @@ const TaiKhoanLayout = () => {
 
   return (
     <div className="account-container">
-      {/* HEADER */}
       <div className="account-header">
         {isLoggedIn ? (
           <div className="account-info">
