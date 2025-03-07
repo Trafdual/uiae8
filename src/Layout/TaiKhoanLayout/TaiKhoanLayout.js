@@ -21,7 +21,6 @@ const TaiKhoanLayout = () => {
               </div>
             </div>
             <div className="xu">
-              <div className="currency">VNĐ(k)</div>
               <div className="balance">
                 <div>0.00</div>
                 <img src="/assets/images/reload2.png" alt="Reload" />
@@ -88,7 +87,6 @@ const TaiKhoanLayout = () => {
         ))}
       </div>
 
-      {/* NAVBAR */}
       <div className="navbar"></div>
     </div>
   );

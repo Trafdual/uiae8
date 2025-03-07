@@ -4,6 +4,9 @@ import { CSKHLayout } from '../Layout/CSKHLayout'
 import { DaiLyLayout } from '../Layout/DaiLyLayout'
 import { TaiKhoanLayout } from '../Layout/TaiKhoanLayout'
 import { LoginLayout } from '../Layout/LoginLayout'
+import DepositPage from '../Layout/DepositPage/DepositPage'
+import TransactionHistory from '../Layout/TransactionHistory/TransactionHistory'
+import GameHistory from '../Layout/BettingHistory/Bettinghistory'
 const publicRoutes = [
   {
     path: '/login',
@@ -29,7 +32,20 @@ const publicRoutes = [
   {
     path: '/taikhoan',
     component: TaiKhoanLayout
+  },
+  {
+    path: '/deposit',
+    component: DepositPage
+  },
+  {
+    path: '/transaction_history',
+    component: TransactionHistory
+  },
+  {
+    path: '/betting_history',
+    component: GameHistory
   }
+  
 ]
 const privateRoutes = []
 export { publicRoutes, privateRoutes }

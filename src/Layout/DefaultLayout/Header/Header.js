@@ -4,9 +4,6 @@ import './Header.scss'
 const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
 
-  const handleLogin = () => {
-    setIsLoggedIn(true)
-  }
 
 
   return (

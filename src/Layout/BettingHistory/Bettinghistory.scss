@@ -1,0 +1,239 @@
+.container-bettinghistory {
+    color: #000;
+   width: 100%;
+   max-width: 450px;
+   min-height: 100vh;
+   background-color: #ffffff;
+ 
+ }
+.dropdown-container {
+    display: flex;
+    border: 1px solid #e4e4e4;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: #f8f7f7;
+    margin: 15px 10px 0px 10px;
+  }
+  .dropdown-container-l{
+    flex: 9;
+  }
+  .dropdown-container-r{
+    margin-top: 10px;
+    margin-right:5px;
+  }
+  .dropdown-container label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  
+  }
+  .status-icon {
+    font-size: 14px; 
+    color: #b9b9b9; 
+  }
+  .dropdown-container select {
+    width: 100%;
+    padding: 0px 5px;
+    font-size: 14px;
+    appearance: none;
+    cursor: pointer;
+    border: none; 
+      outline: none;
+    background-color: #f8f7f7;
+  
+  }
+  .time-picker {
+    display: flex;
+    justify-content: space-between; 
+    gap: 5px;  
+    padding: 0px 10px;
+  }
+  
+  .time-container {
+   flex: 1;
+    flex-direction: column;
+    
+    border: 1px solid #e4e4e4;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: #f8f7f7;
+  }
+  
+  .status-label {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .time-input-group {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .date-input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    outline: none;
+    width: 100%; 
+  }
+  
+  .bet-container{
+      height: 250px;
+  }
+  .header-app {
+    position: relative;
+    background-color: #00a0ff;
+    color: #e3f2fd;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .header-app .back-icon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  .game-row {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .button{
+    text-align: center;
+  }
+  
+  .nrc-button {
+    width: 70%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  
+  .info {
+    margin-left: 10px;
+    display: flex; 
+    align-items: center; 
+    gap: 5px;
+  }
+  
+  .material-icons {
+    font-size: 14px; 
+    color: #c4c4c4; 
+  }
+  
+  small {
+    font-size: 12px; 
+    color: #c4c4c4; 
+  }
+  .bet-card {
+    font-family: Arial, sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    max-width: 400px;
+    background: linear-gradient(45deg, #63acff, #ffffffc9);
+    margin: 0px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .bet-header .bet-odds {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .bet-details p {
+    margin: 7px 0;
+    font-size: 14px;
+    color: #555;
+  }
+  .bet-amount p{
+    color: #555;
+    margin: 0;
+    font-size: 14px;
+  
+  }
+  .amountorange{
+    color: #ff8800;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 5px;
+  }
+  .bet-details .highlight {
+    background-color: #eaf4ff;
+    padding: 3px 5px;
+    border-radius: 3px;
+    color: #007bff;
+  }
+  
+  .copy-icon {
+    font-size: 16px;
+    cursor: pointer;
+    color: #555;
+  }
+  
+  .bet-footer {
+    display: flex;
+    justify-content: space-between;
+   
+  }
+  .copy {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  .copy img {
+    height: 20px;
+    width: 25px;
+  }
+  
+  .bet-header .win {
+    color: green; 
+  }
+  
+  .bet-header .lose {
+    color: red; 
+  }
+  
+  .bet-header .draw {
+    color: rgb(255, 174, 0);
+  }
+  .box-height{
+    height: 50px;
+  }
+  @media screen and (min-width: 450px) {
+    body {
+      margin: 0 auto;
+      width: 450px;
+      background-color: gray;
+    }
+  }
+  

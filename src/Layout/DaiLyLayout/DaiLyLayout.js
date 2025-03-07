@@ -5,7 +5,7 @@ import Notification from "../../component/Notification/Notifition";
 const DaiLyLayout = () => {
   const [showNoti, setShowNoti] = useState(false);
   const [notiMessage, setNotiMessage] = useState("");
-  const qrRef = useRef(null); // Dùng useRef để lấy ảnh QR
+  const qrRef = useRef(null); 
 
   const handleCopy = (text) => {
     navigator.clipboard.writeText(text).then(() => {

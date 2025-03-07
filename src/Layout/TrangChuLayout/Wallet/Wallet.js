@@ -24,7 +24,7 @@ const Wallet = () => {
         </div>
       </Link>
 
-      <Link to="/deposit/deposit.html">
+      <Link to="/deposit">
         <div className="nav-item">
           <img src="../assets/images/naptien.png" alt="Tải APP" className="icon" />
           <span> Nạp Tiền </span>

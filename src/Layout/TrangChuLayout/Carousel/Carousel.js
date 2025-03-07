@@ -1,14 +1,7 @@
 import React, { useState, useEffect } from "react";
-import "./Carousel.scss"; // Đảm bảo có CSS phù hợp
+import "./Carousel.scss";
 
-const images = [
-  "/assets/images/1.webp",
-  "/assets/images/ae8-club.webp",
-  "/assets/images/5.webp",
-  "/assets/images/2.webp",
-];
-
-const Carousel = () => {
+const Carousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {

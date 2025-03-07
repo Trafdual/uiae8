@@ -4,9 +4,15 @@ import FooterTrangChu from "./FooterTrangChu/FooterTrangChu";
 import "./TrangChuLayout.scss";
 import Wallet from "./Wallet/Wallet";
 function TrangChuLayout() {
+  const imageList = [
+    "/assets/images/1.webp",
+    "/assets/images/ae8-club.webp",
+    "/assets/images/5.webp",
+    "/assets/images/2.webp",
+  ];
   return (
     <div className="trangchu_container">
-      <Carousel />
+      <Carousel images={imageList}/>
       <div className="marquee-container">
         <div style={{ backgroundColor: "white", zIndex: 1000 }}>
           <img
