@@ -5,6 +5,7 @@ import { Loading } from '../../component/Loading'
 import { getApiUrl } from '../../api'
 import Notification from '../../component/Notification/Notifition'
 import { saveTosessionstorage } from '../../component/MaHoaDuLieu'
+import { Link } from 'react-router-dom'
 const LoginLayout = () => {
   const [ispassword, setispassword] = useState(true)
   const [modalCapcha, setisModalCapcha] = useState(false)
@@ -49,19 +50,19 @@ const LoginLayout = () => {
     <>
       <div class='login-container'>
         <div class='login-header'>
-          <a href='/'>
+          <Link to='/'>
             <div class='btn-right'>
-              <img src='/assets/images/btn-close.png' alt class='btn-close' />
+              <img src='/assets/images/btn-close.png' alt="" class='btn-close' />
             </div>
-          </a>
+          </Link>
           <div class='top-img'>
-            <img src='/assets/images/top-img.png' alt />
+            <img src='/assets/images/top-img.png' alt="" />
           </div>
         </div>
 
         <div class='login-input'>
           <div class='login-input-field'>
-            <img src='/assets/images/account.png' alt />
+            <img src='/assets/images/account.png' alt="" />
             <input
               type='text'
               placeholder='Vui lòng nhập tài khoản'

@@ -1,7 +1,8 @@
 import './Footer.scss'
 import { Link } from 'react-router-dom'
-
+import { getFromsessionstorage } from '../../../component/MaHoaDuLieu'
 function Footer () {
+  const userdata = JSON.parse(getFromsessionstorage('data_u'))
   return (
     <div class='navbar1'>
       <Link to='/'>
@@ -32,7 +33,7 @@ function Footer () {
           <span>Đại Lý</span>
         </div>
       </Link>
-      <Link to='/member'>
+      <Link to={userdata ? '/member' : '/login'}>
         <div class='nav-item'>
           <img src='/assets/images/taikhoan.png' alt='Tài Khoản' class='icon' />
           <span>Tài Khoản</span>

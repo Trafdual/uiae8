@@ -1,13 +1,13 @@
 import React from "react";
 import "./KhuyenMaiLayout.scss";
-
+import { Link } from "react-router-dom";
 const KhuyenMaiLayout = () => {
   return (
     <div className="container-khuyenmai">
       <header className="headerKhuyenMai">
-        <a href="/trangchu/trangchu.html">
+        <Link to="/">
           <img src="../assets/images/trangchu.png" alt="Avatar" className="home-icon" />
-        </a>
+        </Link>
         Khuyến mãi
       </header>
 

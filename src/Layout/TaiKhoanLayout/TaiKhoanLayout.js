@@ -2,18 +2,18 @@ import React, { useState } from "react";
 import "./TaiKhoanLayout.scss";
 import { Link } from "react-router-dom";
 const TaiKhoanLayout = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+
   const username = "ae12123"; 
 
   const dangxuat = () => {
-    setIsLoggedIn(false);
+
     alert("Bạn đã đăng xuất!");
   };
 
   return (
     <div className="account-container">
       <div className="account-header">
-        {isLoggedIn ? (
+     
           <div className="account-info">
             <div className="namedx">
               <div className="player">Xin chào, {username}</div>
@@ -28,14 +28,7 @@ const TaiKhoanLayout = () => {
               </div>
             </div>
           </div>
-        ) : (
-          <div className="account-dkdn">
-            <p className="header-text">
-              Xin chào, vui lòng <Link to="/login">Đăng nhập</Link> /{" "}
-              <Link to="/register">Đăng ký</Link>
-            </p>
-          </div>
-        )}
+        
       </div>
 
       {/* DANH SÁCH CHỨC NĂNG */}
