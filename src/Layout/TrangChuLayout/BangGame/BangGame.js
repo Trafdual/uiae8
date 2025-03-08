@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
 import './BangGame.scss'
 import { LichThiDau } from './LichThiDau'
+import { Casino } from './Casino'
+import { NoHu } from './NoHu'
+import { XoSo } from './XoSo'
+import { TheThao } from './TheThao'
+import { DaGa } from './DaGa'
 
 const categoryList = [
   { id: 'tyso', name: 'Phản Tỷ Số', img: '/assets/images/bong.png' },
@@ -35,14 +40,43 @@ const BangGame = ({ onSelectCategory }) => {
           </div>
         ))}
       </div>
-      <div className='content' id='core2'>
-        <div class='tabscore'>
-          <button id='btnlichthidau' class='active-tab'>
-            Lịch Thi Đấu
-          </button>
+      {activeCategory === 'tyso' && (
+        <div className='content' id='core2'>
+          <>
+            <div class='tabscore'>
+              <button id='btnlichthidau' class='active-tab'>
+                Lịch Thi Đấu
+              </button>
+            </div>
+            <LichThiDau />
+          </>
         </div>
-        <LichThiDau />
-      </div>
+      )}
+      {activeCategory === 'casino' && (
+        <div className='content'>
+          <Casino />
+        </div>
+      )}
+      {activeCategory === 'nohu' && (
+        <div className='content'>
+          <NoHu />
+        </div>
+      )}
+      {activeCategory === 'xoso' && (
+        <div className='content'>
+          <XoSo />
+        </div>
+      )}
+      {activeCategory === 'thethao' && (
+        <div className='content'>
+          <TheThao />
+        </div>
+      )}
+      {activeCategory === 'daga' && (
+        <div className='content'>
+          <DaGa />
+        </div>
+      )}
     </div>
   )
 }

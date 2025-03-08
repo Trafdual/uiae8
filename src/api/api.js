@@ -3,6 +3,8 @@ const encryptedApis = {
   login: process.env.REACT_APP_API_LOGIN,
   register: process.env.REACT_APP_API_REGISTER,
   searchtrantheongay: process.env.REACT_APP_API_SEARCHTRAN,
+  linkanh: process.env.REACT_APP_API_LINKANH,
+  withdraw: process.env.REACT_APP_API_POST_WITHDRAW
 }
 
 export const getApiUrl = key => {
