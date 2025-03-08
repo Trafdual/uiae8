@@ -19,7 +19,7 @@ const MatchDetails = () => {
       </header>
 
      
-        <div className="game-info">
+        <div className="game-info1">
           <div className="league-name">
             <h4>Cambodian Premier League</h4>
           </div>
