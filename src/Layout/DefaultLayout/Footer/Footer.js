@@ -32,7 +32,7 @@ function Footer () {
           <span>Đại Lý</span>
         </div>
       </Link>
-      <Link to='/taikhoan'>
+      <Link to='/member'>
         <div class='nav-item'>
           <img src='/assets/images/taikhoan.png' alt='Tài Khoản' class='icon' />
           <span>Tài Khoản</span>

@@ -1,0 +1,35 @@
+.deposit-info {
+    background: linear-gradient(135deg, #00aae6, #00aae6 45%, #06beff 0, #00aae6);
+    padding: 10px 15px 10px 0;
+    position: relative;
+    color: #fff;
+    margin-top: 45px;
+  }
+  
+  .deposit-info-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  .deposit-account {
+    background-color: #0084b3;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    padding: 3px 15px;
+    border-radius: 0 100px 100px 0;
+  }
+  
+  .deposit-account img {
+    width: 22px;
+    width: 22px;
+  }
+  
+  .deposit-account-name {
+    font-size: 14px;
+  }
+  
+  .deposit-balance-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

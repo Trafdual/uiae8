@@ -7,16 +7,18 @@ function DefaultLayout({ children }) {
   const location = useLocation();
 
   // Danh sách các trang không cần Header
-  const hiddenHeaderRoutes = ['/khuyenmai','/cskh','/daily','/taikhoan','/deposit','/transaction_history','/betting_history'];
-
+  const hiddenHeaderRoutes = ['/khuyenmai','/cskh','/daily','/member','/deposit','/transactionhistory','/member/bettinghistory'];
+  const hiddenFooterRoutes = ['/member/bettinghistory','/member/withdraw','/member/setting','/member/deposit'];
   // Kiểm tra nếu đường dẫn hiện tại có trong danh sách
   const shouldHideHeader = hiddenHeaderRoutes.some(route => location.pathname.includes(route));
+  const shouldHideFooter = hiddenFooterRoutes.some(route => location.pathname.includes(route));
 
   return (
     <div className="default-layout-container">
       {!shouldHideHeader && <Header />}
       {children}
-      <Footer />
+      {!shouldHideFooter && <Footer />}
+ 
     </div>
   );
 }

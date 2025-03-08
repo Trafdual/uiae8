@@ -1,37 +1,31 @@
 import React, { useState } from "react";
 import "./Bettinghistory.scss";
-import { FaCaretDown, FaInfoCircle } from "react-icons/fa";
+import { FaCaretDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const gameStatuses = [
   { status: "Thắng", odds: "2.33%", state: "win", timedau: "01/11/2025 12:58:50 PM", time: "01/11/2025 12:58:50 PM", amount: 200 },
-  { status: "Thua", odds: "1.15%", state: "lose", timedau: "01/11/2025 12:58:50 PM", time: "02/11/2025 12:30:00 PM", amount: 300 },
-  { status: "Hòa", odds: "3.00%", state: "draw", timedau: "01/11/2025 12:58:50 PM", time: "03/11/2025 02:15:00 PM", amount: 150 },
+ 
 ];
 
 const GameStatusDropdown = () => (
-  <div className="dropdown-container">
-    <label className="status-label">Trạng thái</label>
-    <div className="dropdown-container-l">
-      <select>
-        <option value="0">Toàn bộ</option>
-        <option value="1">Đã xử lý</option>
-        <option value="2">Đang tiến hành</option>
-        <option value="3">Hệ thống hủy</option>
-        <option value="4">Từ chối</option>
-        <option value="5">Vô hiệu</option>
-        <option value="6">Người chơi hủy</option>
-      </select>
-      <FaCaretDown className="status-icon" />
-    </div>
-  </div>
-);
+  <div class="dropdown-container">
+          <div class="dropdown-container-l">
+            <label for="status-dropdown" class="status-label">
+              Trạng thái
+            </label>
+            <select id="status-dropdown">
+              <option value="member/bet-history">Đang xử lý</option>
+              <option value="member/bet-history-done" selected="">Đã hoàn thành</option>
+            </select>
+          </div>
+          <div class="dropdown-container-r">
+          <FaCaretDown className="status-icon" />
 
-const TimePicker = ({ label, id, type, defaultValue }) => (
-  <div className="time-container">
-    <label htmlFor={id} className="status-label">{label}</label>
-    <input type={type} id={id} defaultValue={defaultValue} className="date-input" />
-  </div>
+          </div>
+        </div>
 );
 
 const GameCard = ({ game }) => (
@@ -53,19 +47,34 @@ const GameCard = ({ game }) => (
     </div>
     <hr />
     <div className="bet-footer">
-      <div className="bet-amount">
-        <p>Tiền cược</p>
-        <div className="amountorange">{game.amount}</div>
-      </div>
-    </div>
+            <div className="bet-amount">
+              <p>Tiền cược</p>
+              <div className="amountorange">${game.amount}</div>
+            </div>
+            <div className="bet-amount">
+              <p>Lợi nhuận</p>
+              <div className="amountorange">4.66</div>
+            </div>
+            <div className="bet-amount">
+              <p>Phí cược</p>
+              <div className="amountorange">0.23</div>
+            </div>
+            <div className="bet-amount">
+              <p>Lợi nhuận dòng</p>
+              <div className="amountorange">5.38</div>
+            </div>
+            
+          </div>
   </div>
 );
 
 const GameHistory = () => {
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
   return (
     <div className="container-bettinghistory">
       <div className="header-app">
-        <Link to="/account">
+        <Link to="/member">
           <img src="../../assets/images/backicon.png" alt="Back" className="back-icon" />
         </Link>
         Lịch Sử Trò Chơi
@@ -73,15 +82,28 @@ const GameHistory = () => {
       <div className="game-history-search-form-1">
         <GameStatusDropdown />
         <div className="time-picker">
-          <TimePicker label="Thời gian từ" id="start-date" type="date" defaultValue="2025-01-05" />
-          <TimePicker id="start-time" type="time" defaultValue="08:00" />
+            <div className="input-container">
+            <DatePicker
+              selected={startDate}
+              onChange={(dates) => {
+                const [start, end] = dates;
+                setStartDate(start);
+                setEndDate(end);
+              }}
+              startDate={startDate}
+              endDate={endDate}
+              selectsRange
+              dateFormat="yyyy-MM-dd"
+              placeholderText="Chọn ngày"
+              className="uni-input-input"
+            />
+            </div>
         </div>
-        <div className="time-picker">
-          <TimePicker label="Thời gian kết thúc" id="end-date" type="date" defaultValue="2025-01-05" />
-          <TimePicker id="end-time" type="time" defaultValue="18:00" />
-        </div>
-        <div className="info"><FaInfoCircle /> <small>Kiểm tra lịch sử giao dịch 31 ngày gần đây</small></div>
+       
+        <div className="button-betting">
         <button className="nrc-button">Tìm kiếm</button>
+
+        </div>
         <div className="game-history-search-form">
           {
           gameStatuses.map((game, index) => (

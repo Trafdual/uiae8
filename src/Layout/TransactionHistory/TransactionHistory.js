@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./TransactionHistory.scss";
-
+import { Link } from "react-router-dom";
 const sampleData = [
   { date: "25-12-2024", type: "Deposit", code: "74ED7190", amount: "300.000đ", status: "success" },
   { date: "25-12-2024", type: "Deposit", code: "74ED7188", amount: "100.000đ", status: "pending" },
-  { date: "25-12-2024", type: "Deposit", code: "74ED7189", amount: "200.000đ", status: "failed" },
-  { date: "25-12-2024", type: "Deposit", code: "74ED7190", amount: "300.000đ", status: "success" },
+  
 ];
 
 const getStatusText = (status) => {
@@ -31,11 +30,11 @@ const TransactionHistory = () => {
   return (
     <div className="transaction-container">
       <div className="transaction-header">
-        <a href="/account/account.html">
+        <Link to="/member">
           <div className="ic-back">
             <img src="/assets/images/ic_back_white.png" alt="Back" />
           </div>
-        </a>
+        </Link>
         <div className="transaction-text">Lịch Sử Giao Dịch</div>
       </div>
 

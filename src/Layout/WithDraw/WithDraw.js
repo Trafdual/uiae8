@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import "./DepositPage.scss";
+import "./WithDraw.scss";
 import Carousel from "../TrangChuLayout/Carousel/Carousel";
 import DepositInfo from "../../component/BalanceNapRut/DepositInfo";
 import { Link } from "react-router-dom";
-const DepositPage = () => {
+const WithDraw = () => {
   const [amount, setAmount] = useState(0);
   const [receivedAmount, setReceivedAmount] = useState(0);
   const depositAmounts = [50, 100, 200, 500, 1000, 5000, 10000, 20000];
@@ -11,10 +11,14 @@ const DepositPage = () => {
     "../assets/images/naptien/bannernaprut1.png",
     "../assets/images/naptien/bannernaprut2.png",
   ];
-
+  const [password, setPassword] = useState("");
   const handleAmountClick = (value) => {
     setAmount(value);
     setReceivedAmount(value * 1000);
+  };
+  const handleChange = (e) => {
+    const numericValue = e.target.value.replace(/[^0-9]/g, "");
+    setPassword(numericValue);
   };
 
   return (
@@ -25,14 +29,14 @@ const DepositPage = () => {
             <img src="/assets/images/back.png" alt="Back" />
           </div>
         </Link>
-        <div className="deposit-title">Nạp tiền</div>
+        <div className="deposit-title">Rút tiền</div>
         <Link to={"/member/transactionhistory"}>
-          <div className="deposit-right">
-            <div className="deposit-icon-history">
-              <img src="/assets/images/account/dvkh.png" alt="History" />
-            </div>
-            <div className="deposit-link-name">Lịch sử</div>
+        <div className="deposit-right">
+          <div className="deposit-icon-history">
+            <img src="/assets/images/account/dvkh.png" alt="History" />
           </div>
+          <div className="deposit-link-name">Lịch sử</div>
+        </div>
         </Link>
       </div>
       <DepositInfo username="ae12123" balance={"1,252,200"} />
@@ -46,8 +50,10 @@ const DepositPage = () => {
       </div>
       <div className="deposit-input">
         <div className="deposit-info-header">
-          <span>Hạn mức nạp 50 - 300000</span>
-          <span>Không mất phí</span>
+          <span>Mức rút tối thiểu là 100 coin ~ 100,000 đ</span>
+          <span>
+            Tối đa bạn có thể rút tối đa 1269405.510 coin ~ 1,269,405,510 đ
+          </span>
         </div>
         <div className="deposit-input-box">
           <input
@@ -70,9 +76,6 @@ const DepositPage = () => {
               </button>
             ))}
           </div>
-          <div className="deposit-received">
-            Số tiền bạn nhận được: <span>{receivedAmount} coin</span>
-          </div>
         </div>
         <div className="deposit-warning-text">
           Lời nhắc nhở: Mỗi lần giao dịch không nên vượt quá 300 triệu để bảo
@@ -80,15 +83,40 @@ const DepositPage = () => {
           dưới 300 triệu bảo đảm mức an toàn , Hãy chú ý bảo mật thông tin của
           mình..
         </div>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            border: "1px solid #ddd",
+            borderRadius: "4px 4px 0 0",
+            padding: "15px",
+          }}
+        >
+          <input
+            style={{
+              flex: 1,
+              fontSize: "16px",
+              border: "none",
+              outline: "none",
+            }}
+            type="text"
+            name="password_withdrawal"
+            maxLength="6"
+            value={password}
+            onChange={handleChange}
+            placeholder="Vui lòng nhập mật khẩu rút tiền"
+            required
+          />
+        </div>
       </div>
       <Carousel images={carouselImages} />
       <div class="deposit-proceed">
         <button type="submit" class="btn-proceed">
-          Nạp tiền
+          Rút tiền
         </button>
       </div>
     </div>
   );
 };
 
-export default DepositPage;
+export default WithDraw;

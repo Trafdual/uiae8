@@ -43,44 +43,50 @@
     background-color: #f8f7f7;
   
   }
-  .time-picker {
-    display: flex;
-    justify-content: space-between; 
-    gap: 5px;  
-    padding: 0px 10px;
+  .time-picker{
+    margin: 10px;
   }
-  
-  .time-container {
-   flex: 1;
-    flex-direction: column;
-    
-    border: 1px solid #e4e4e4;
-    border-radius: 4px;
-    padding: 5px;
-    background-color: #f8f7f7;
-  }
-  
-  .status-label {
-    font-size: 14px;
-    color: #333;
-  }
-  
-  .time-input-group {
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-  
-  .date-input {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border: none;
-    background: transparent;
-    font-size: 14px;
-    outline: none;
-    width: 100%; 
-  }
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  padding: 10px;
+  background: white;
+  justify-content: center;
+}
+
+/* Style cho Popup lịch */
+.react-datepicker {
+  font-family: Arial, sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+.react-datepicker__day {
+  // padding: 4px;
+  font-size: 12px;
+}
+
+/* Ngày được chọn */
+.react-datepicker__day--selected,
+.react-datepicker__day--in-range {
+  background: #00a0ff !important;
+  color: white !important;
+  border-radius: 50%;
+}
+.uni-input-input {
+  border: none !important;
+  outline: none !important;
+  background: transparent;
+  font-size: 14px;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+}
+.button-betting {
+  text-align: center;
+}
   
   .bet-container{
       height: 250px;
@@ -105,16 +111,7 @@
     transform: translateY(-50%);
     cursor: pointer;
   }
-  .game-row {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .button{
-    text-align: center;
-  }
-  
+
   .nrc-button {
     width: 70%;
     padding: 10px;
@@ -128,24 +125,7 @@
     text-align: center;
     justify-content: center;
   }
-  
-  
-  .info {
-    margin-left: 10px;
-    display: flex; 
-    align-items: center; 
-    gap: 5px;
-  }
-  
-  .material-icons {
-    font-size: 14px; 
-    color: #c4c4c4; 
-  }
-  
-  small {
-    font-size: 12px; 
-    color: #c4c4c4; 
-  }
+
   .bet-card {
     font-family: Arial, sans-serif;
     border: 1px solid #ddd;
@@ -153,7 +133,7 @@
     padding: 15px;
     max-width: 400px;
     background: linear-gradient(45deg, #63acff, #ffffffc9);
-    margin: 0px 10px;
+    margin: 10px 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   

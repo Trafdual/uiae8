@@ -77,18 +77,18 @@ const RegisterLayout = () => {
         <div class='register-header'>
           <a href='../trangchu/trangchu.html'>
             <div class='btn-right'>
-              <img src='/assets/images/btn-close.png' alt class='btn-close' />
+              <img src='/assets/images/btn-close.png' alt="" class='btn-close' />
             </div>
           </a>
           <div class='top-img'>
-            <img src='/assets/images/top-img.png' alt />
+            <img src='/assets/images/top-img.png' alt="" />
           </div>
         </div>
 
         <div class='register-form'>
           <div class='register-input-field'>
             <label for='username'>
-              <img src='/assets/images/account.png' alt='' />
+              <img src='/assets/images/account.png' alt="" />
               Tên đăng nhập
             </label>
             <input
@@ -103,7 +103,7 @@ const RegisterLayout = () => {
           </div>
           <div class='register-input-field'>
             <label for='password'>
-              <img src='/assets/images/register-pass.png' alt />
+              <img src='/assets/images/register-pass.png' alt="a" />
               Mật khẩu
             </label>
             <input
@@ -153,7 +153,7 @@ const RegisterLayout = () => {
           </div>
           <div class='register-input-field'>
             <label for='email'>
-              <img src='/assets/images/account.png' alt />
+              <img src='/assets/images/account.png' alt="" />
               Mã mời
             </label>
             <input
