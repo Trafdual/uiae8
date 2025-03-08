@@ -17,7 +17,7 @@ const LichThiDau = () => {
     return Array.from({ length: 4 }, (_, i) => {
       const date = new Date()
       date.setDate(today.getDate() + i)
-      return date.toISOString().split('T')[0]
+      return date.toLocaleDateString('en-CA')
     })
   }
 
@@ -128,38 +128,40 @@ const LichThiDau = () => {
       </div>
       {filteredData.length > 0 ? (
         filteredData.map(item => (
-          <Link to={"/game/detailmatch"}>
-          <div className='divitemtyso' key={item.id}>
-            <div className='item-tyso'>
-              <div className='tieudescore'>
-                <h4>{item.leagueName}</h4>
-                <p>{convertTimestampToTime(item.started)}</p>
-              </div>
-              <div className='doibongtong'>
-                <div className='divdoibong'>
-                  <div className='doibong'>
-                    <img src={imageUrls[item.homeIcon]} alt='' />
-                    <p>{item.homeTeam}</p>
-                  </div>
-                  <div className='doibong'>
-                    <img src={imageUrls[item.awayIcon]} alt='' />
-                    <p>{item.awayTeam}</p>
-                  </div>
+          <Link to={`/game/detailmatch/${item.gameId}`} key={item.id}>
+            <div className='divitemtyso'>
+              <div className='item-tyso'>
+                <div className='tieudescore'>
+                  <h4>{item.leagueName}</h4>
+                  <p>{convertTimestampToTime(item.started)}</p>
                 </div>
-                <div className='divtyso'>
-                  <p>[FT] 0:0</p>
-                  <p>{percentages[item.id]}%</p>
-                  <div className='thanh'>
-                    <span className='percentage'>{percentages[item.id]}%</span>
-                    <div
-                      className='progress'
-                      style={{ width: `${percentages[item.id]}%` }}
-                    ></div>
+                <div className='doibongtong'>
+                  <div className='divdoibong'>
+                    <div className='doibong'>
+                      <img src={imageUrls[item.homeIcon]} alt='' />
+                      <p>{item.homeTeam}</p>
+                    </div>
+                    <div className='doibong'>
+                      <img src={imageUrls[item.awayIcon]} alt='' />
+                      <p>{item.awayTeam}</p>
+                    </div>
+                  </div>
+                  <div className='divtyso'>
+                    <p>[FT] 0:0</p>
+                    <p>{percentages[item.id]}%</p>
+                    <div className='thanh'>
+                      <span className='percentage'>
+                        {percentages[item.id]}%
+                      </span>
+                      <div
+                        className='progress'
+                        style={{ width: `${percentages[item.id]}%` }}
+                      ></div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
           </Link>
         ))
       ) : (

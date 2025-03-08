@@ -4,7 +4,9 @@ const encryptedApis = {
   register: process.env.REACT_APP_API_REGISTER,
   searchtrantheongay: process.env.REACT_APP_API_SEARCHTRAN,
   linkanh: process.env.REACT_APP_API_LINKANH,
-  withdraw: process.env.REACT_APP_API_POST_WITHDRAW
+  withdraw: process.env.REACT_APP_API_POST_WITHDRAW,
+  chitiettran: process.env.REACT_APP_API_CHITIETTRAN,
+  keochitiet: process.env.REACT_APP_API_KEOCHITIET,
 }
 
 export const getApiUrl = key => {

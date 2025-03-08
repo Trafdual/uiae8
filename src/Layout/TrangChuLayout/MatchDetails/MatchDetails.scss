@@ -1,340 +1,362 @@
 .container-detailsmatch {
-    height: 100vh;
-    overflow: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    background-color: white;
-  }
+  height: 100vh;
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  background-color: white;
+}
+
 .head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 3.125rem;
-    position: relative;
-    padding: 0 0.9375rem;
-    background: white;
-    color: #00abe5;
-  }
-  
-  .divimgback {
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .divimgback img {
-    height: 2rem;
-    width: 2rem;
-  }
-  .divtttd {
-    position: absolute;
-    text-align: center;
-    left: 1.9375rem;
-    right: 1.9375rem;
-    font-size: 1.125rem;
-  }
-  .game-info1 {
-    background: linear-gradient(90deg, #5da6fa, #00abe5);
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    padding: 10px;
-    color: white;
-  }
-  .league-name {
-    width: 100%;
-    text-align: center;
-    font-size: 1.125rem;
-  }
-  .team-box {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    gap: 20px;
-    justify-content: center;
-  }
-  .team-item {
-    flex: 1;
-    padding: 0 0.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .team-logo {
-    width: 3.125rem;
-    height: 3.125rem;
-    margin: 0 auto 0.5rem;
-    display: block;
-  }
-  .team-name {
-    line-height: 0.9375rem;
-    height: 1.875rem;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-  .game-date {
-    text-align: center;
-  }
-  .divnghichtyso {
-    margin-top: 10px;
-  }
-  
-  .tieudenghich {
-    text-align: center;
-    color: #00abe5;
-    font-size: 1.125rem;
-  }
-  .tieudenghich h4 {
-    margin-top: 5px;
-  }
-  .bodynghich {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding: 5px;
-  }
-  .item-nghich {
-    flex: 0 1 calc(33.33% - 30px);
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #00abe5;
-    background-color: rgb(238, 237, 237);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-  }
-  .item-nghich p {
-    margin: 0;
-  }
-  .item-nghich img {
-    width: 1.25rem;
-    height: 1.25rem;
-  }
-  
-  .m-tab {
-    overflow-x: auto;
-    white-space: nowrap;
-    scroll-snap-type: x mandatory;
-    display: flex;
-    gap: 0.625rem;
-  }
-  
-  .m-tab::-webkit-scrollbar {
-    height: 5px;
-  }
-  .m-tab::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background: transparent;
-  }
-  
-  .m-tab::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 10px; 
-  }
-  
-  .m-tab::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.4);
-  }
-  
-  .m-tab button {
-    background: rgb(220, 220, 220);
-    border: none;
-    padding: 0 0.625rem;
-    line-height: 1.6875rem;
-    border-radius: 20px;
-    display: inline-block;
-    white-space: nowrap;
-  }
-  
-  .m-tab button.active {
-    background: linear-gradient(50deg, #3c97ff, #00abe5);
-    color: white;
-  }
-  .modal-detailmatch {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
-  .modal-content-detailmatch {
-    background: white;
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  .tieudemodal {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative; 
-  }
-  
-  .close-modal {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #00abe5;
-    border: none;
-    cursor: pointer;
-    color: white;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .tieudemodal h4 {
-    margin: 0;
-    font-size: 18px; 
-    color: black;
-  }
-  
-  .divtysomodal {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px;
-    border-bottom: 1px solid #00abe5;
-  }
-  .divtysomodal p {
-    margin: 0;
-  }
-  .teamtime {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .teamtime img {
-    width: 60px;
-    height: 60px;
-  }
-  .teamtime p {
-    margin: 0;
-  }
-  .sotien {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-    justify-content: center;
-  }
-  .sotien p {
-    margin: 0;
-  }
-  .sotien input {
-    padding: 5px;
-    border-radius: 5px;
-    background-color: #cacaca;
-    border: none;
-    outline: none;
-    width: 70%;
-    font-size: 13px;
-    text-align: center;
-  }
-  .options {
-    margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  
-  .options button {
-    flex: 0 1 calc(33.33% - 10px);
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    border: 1px solid #00abe5;
-    color: rgb(10, 10, 10);
-    cursor: pointer;
-    text-align: center;
-    font-size: 14px;
-  }
-  .options button.active{
-      background-color: #00abe5;
-      color: white;
-  }
-  
-  .divtyle{
-      display: flex;
-      padding: 10px;
-      align-items: center;
-      justify-content: space-between;
-  }
-  .tieudetyle{
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-  }
-  .tieudetyle p{
-      margin: 5px;
-      font-weight: bold;
-  
-  }
-  .tyle{
-      display: flex;
-      flex-direction: column;
-      align-items: end;
-  }
-  .tyle p{
-      margin: 5px;
-  }
-  .btnmodal{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-      gap: 10px;
-  }
-  .btnhuy{
-      border-radius: 20px;
-      padding: 10px;
-      padding-left: 20px;
-      padding-right: 20px;
-      border: none;
-      background-color: #bebebe;
-      cursor: pointer;
-  }
-  .place-bet{
-       border-radius: 20px;
-       border: none;
-       background: linear-gradient(50deg, #3c97ff, #00abe5);
-       padding: 10px;
-       padding-left: 20px;
-       padding-right: 20px;
-       color: white;
-       cursor: pointer;
-  }
-  
-  
-  @media screen and (min-width: 450px) {
-    body {
-      width: 450px;
-      margin: 0 auto;
-      background-color: gray;
-    }
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3.125rem;
+  position: relative;
+  padding: 0 0.9375rem;
+  background: white;
+  color: #00abe5;
+}
+
+.divimgback {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.divimgback img {
+  height: 2rem;
+  width: 2rem;
+}
+
+.divtttd {
+  position: absolute;
+  text-align: center;
+  left: 1.9375rem;
+  right: 1.9375rem;
+  font-size: 1.125rem;
+}
+
+.game-info1 {
+  background: linear-gradient(90deg, #5da6fa, #00abe5);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 10px;
+  color: white;
+}
+
+.league-name {
+  width: 100%;
+  text-align: center;
+  font-size: 1.125rem;
+}
+
+.team-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 20px;
+  justify-content: center;
+}
+
+.team-item {
+  flex: 1;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-logo {
+  width: 3.125rem;
+  height: 3.125rem;
+  margin: 0 auto 0.5rem;
+  display: block;
+}
+
+.team-name {
+  line-height: 0.9375rem;
+  height: 1.875rem;
+  text-align: center;
+}
+
+.game-date {
+  text-align: center;
+}
+
+.divnghichtyso {
+  margin-top: 10px;
+}
+
+.tieudenghich {
+  text-align: center;
+  color: #00abe5;
+  font-size: 1.125rem;
+}
+
+.tieudenghich h4 {
+  margin-top: 5px;
+}
+
+.bodynghich {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 5px;
+}
+
+.item-nghich {
+  flex: 0 1 calc(33.33% - 30px);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #00abe5;
+  background-color: rgb(238, 237, 237);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.item-nghich p {
+  margin: 0;
+}
+
+.item-nghich img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.m-tab {
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  gap: 0.625rem;
+}
+
+.m-tab::-webkit-scrollbar {
+  height: 5px;
+}
+
+.m-tab::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: transparent;
+}
+
+.m-tab::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.m-tab::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.m-tab button {
+  background: rgb(220, 220, 220);
+  border: none;
+  padding: 0 0.625rem;
+  line-height: 1.6875rem;
+  border-radius: 20px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.m-tab button.active {
+  background: linear-gradient(50deg, #3c97ff, #00abe5);
+  color: white;
+}
+
+.modal-detailmatch {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content-detailmatch {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.tieudemodal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #00abe5;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tieudemodal h4 {
+  margin: 0;
+  font-size: 18px;
+  color: black;
+}
+
+.divtysomodal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  border-bottom: 1px solid #00abe5;
+}
+
+.divtysomodal p {
+  margin: 0;
+}
+
+.teamtime {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.teamtime img {
+  width: 60px;
+  height: 60px;
+}
+
+.teamtime p {
+  margin: 0;
+}
+
+.sotien {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: center;
+}
+
+.sotien p {
+  margin: 0;
+}
+
+.sotien input {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #cacaca;
+  border: none;
+  outline: none;
+  width: 70%;
+  font-size: 13px;
+  text-align: center;
+}
+
+.options {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.options button {
+  flex: 0 1 calc(33.33% - 10px);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid #00abe5;
+  color: rgb(10, 10, 10);
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+}
+
+.options button.active {
+  background-color: #00abe5;
+  color: white;
+}
+
+.divtyle {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tieudetyle {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.tieudetyle p {
+  margin: 5px;
+  font-weight: bold;
+
+}
+
+.tyle {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.tyle p {
+  margin: 5px;
+}
+
+.btnmodal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+.btnhuy {
+  border-radius: 20px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  background-color: #bebebe;
+  cursor: pointer;
+}
+
+.place-bet {
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(50deg, #3c97ff, #00abe5);
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  cursor: pointer;
+}

@@ -30,7 +30,7 @@ const publicRoutes = [
     component: TrangChuLayout
   },
   {
-    path: '/game/detailmatch',
+    path: '/game/detailmatch/:gameID',
     component: MatchDetails
   },
   {
