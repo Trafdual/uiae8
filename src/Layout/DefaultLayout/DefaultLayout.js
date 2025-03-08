@@ -7,7 +7,7 @@ function DefaultLayout({ children }) {
   const location = useLocation();
 
   // Danh sách các trang không cần Header
-  const hiddenHeaderRoutes = ['/khuyenmai','/cskh','/daily','/member','/deposit','/transactionhistory','/member/bettinghistory'];
+  const hiddenHeaderRoutes = ['/khuyenmai','/cskh','/daily','/member','/deposit','/transactionhistory','/member/bettinghistory','/game/detailmatch'];
   const hiddenFooterRoutes = ['/member/bettinghistory','/member/withdraw','/member/setting','/member/deposit'];
   // Kiểm tra nếu đường dẫn hiện tại có trong danh sách
   const shouldHideHeader = hiddenHeaderRoutes.some(route => location.pathname.includes(route));

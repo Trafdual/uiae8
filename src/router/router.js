@@ -13,6 +13,7 @@ import Setting from '../Layout/TaiKhoanLayout/Setting/Setting'
 import AboutMe from '../Layout/TaiKhoanLayout/Setting/VeChungToi/VeChungToi'
 import TroGiup from '../Layout/TaiKhoanLayout/Setting/TroGiup/TroGiup'
 import ChinhSach from '../Layout/TaiKhoanLayout/Setting/ChinhSach/ChinhSach'
+import MatchDetails from '../Layout/TrangChuLayout/MatchDetails/MatchDetails'
 const publicRoutes = [
   {
     path: '/login',
@@ -27,6 +28,10 @@ const publicRoutes = [
   {
     path: '/',
     component: TrangChuLayout
+  },
+  {
+    path: '/game/detailmatch',
+    component: MatchDetails
   },
   {
     path: '/khuyenmai',

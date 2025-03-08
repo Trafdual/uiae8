@@ -1,0 +1,164 @@
+.container-detailsmatch {
+    height: 100vh;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background-color: white;
+  }
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3.125rem;
+    position: relative;
+    padding: 0 0.9375rem;
+    background: white;
+    color: #00abe5;
+  }
+  
+  .divimgback {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .divimgback img {
+    height: 2rem;
+    width: 2rem;
+  }
+  .divtttd {
+    position: absolute;
+    text-align: center;
+    left: 1.9375rem;
+    right: 1.9375rem;
+    font-size: 1.125rem;
+  }
+  .game-info {
+    background: linear-gradient(90deg, #5da6fa, #00abe5);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 10px;
+    color: white;
+  }
+  .league-name {
+    width: 100%;
+    text-align: center;
+    font-size: 1.125rem;
+  }
+  .team-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 20px;
+    justify-content: center;
+  }
+  .team-item {
+    flex: 1;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .team-logo {
+    width: 3.125rem;
+    height: 3.125rem;
+    margin: 0 auto 0.5rem;
+    display: block;
+  }
+  .team-name {
+    line-height: 0.9375rem;
+    height: 1.875rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .game-date {
+    text-align: center;
+  }
+  .divnghichtyso {
+    margin-top: 10px;
+  }
+  
+  .tieudenghich {
+    text-align: center;
+    color: #00abe5;
+    font-size: 1.125rem;
+  }
+  .tieudenghich h4 {
+    margin-top: 5px;
+  }
+  .bodynghich {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 5px;
+  }
+  .item-nghich {
+    flex: 0 1 calc(33.33% - 30px);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #00abe5;
+    background-color: rgb(238, 237, 237);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  .item-nghich p {
+    margin: 0;
+  }
+  .item-nghich img {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  
+  .m-tab {
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    gap: 0.625rem;
+  }
+  
+  .m-tab::-webkit-scrollbar {
+    height: 5px;
+  }
+  .m-tab::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: transparent;
+  }
+  
+  .m-tab::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px; 
+  }
+  
+  .m-tab::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .m-tab button {
+    background: rgb(220, 220, 220);
+    border: none;
+    padding: 0 0.625rem;
+    line-height: 1.6875rem;
+    border-radius: 20px;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  
+  .m-tab button.active {
+    background: linear-gradient(50deg, #3c97ff, #00abe5);
+    color: white;
+  }
+  
+  @media screen and (min-width: 450px) {
+    body {
+      width: 450px;
+      margin: 0 auto;
+      background-color: gray;
+    }
+  }
+  

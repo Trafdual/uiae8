@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { getApiUrl } from '../../../../api'
+import { Link } from 'react-router-dom'
 
 const removeVietnameseTones = str => {
   return str
@@ -127,6 +128,7 @@ const LichThiDau = () => {
       </div>
       {filteredData.length > 0 ? (
         filteredData.map(item => (
+          <Link to={"/game/detailmatch"}>
           <div className='divitemtyso' key={item.id}>
             <div className='item-tyso'>
               <div className='tieudescore'>
@@ -158,6 +160,7 @@ const LichThiDau = () => {
               </div>
             </div>
           </div>
+          </Link>
         ))
       ) : (
         <div
