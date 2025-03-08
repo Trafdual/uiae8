@@ -1,7 +1,8 @@
 const encryptedApis = {
   getImageCaptcha: process.env.REACT_APP_API_CAPTCHA,
   login: process.env.REACT_APP_API_LOGIN,
-  register: process.env.REACT_APP_API_REGISTER
+  register: process.env.REACT_APP_API_REGISTER,
+  searchtrantheongay: process.env.REACT_APP_API_SEARCHTRAN,
 }
 
 export const getApiUrl = key => {

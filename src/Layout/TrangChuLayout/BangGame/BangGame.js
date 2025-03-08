@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import './BangGame.scss' // Import file CSS nếu có
+import './BangGame.scss'
+import { LichThiDau } from './LichThiDau'
 
 const categoryList = [
   { id: 'tyso', name: 'Phản Tỷ Số', img: '/assets/images/bong.png' },
@@ -15,7 +16,7 @@ const BangGame = ({ onSelectCategory }) => {
 
   const handleClick = id => {
     setActiveCategory(id)
-    if (onSelectCategory) onSelectCategory(id) // Gửi event về component cha
+    if (onSelectCategory) onSelectCategory(id)
   }
 
   return (
@@ -33,6 +34,14 @@ const BangGame = ({ onSelectCategory }) => {
             <span>{category.name}</span>
           </div>
         ))}
+      </div>
+      <div className='content' id='core2'>
+        <div class='tabscore'>
+          <button id='btnlichthidau' class='active-tab'>
+            Lịch Thi Đấu
+          </button>
+        </div>
+        <LichThiDau />
       </div>
     </div>
   )

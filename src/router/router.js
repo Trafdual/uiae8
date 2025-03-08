@@ -7,6 +7,7 @@ import { LoginLayout } from '../Layout/LoginLayout'
 import DepositPage from '../Layout/DepositPage/DepositPage'
 import TransactionHistory from '../Layout/TransactionHistory/TransactionHistory'
 import GameHistory from '../Layout/BettingHistory/Bettinghistory'
+import RegisterLayout from '../Layout/RegisterLayout/RegisterLayout'
 const publicRoutes = [
   {
     path: '/login',
