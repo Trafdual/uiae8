@@ -65,8 +65,8 @@ const TaiKhoanLayout = () => {
         {[
           { link: "/member/setting", img: "../assets/images/account/caidat.png", text: "Cài đặt" },
           { link: "/member/security", img: "../assets/images/account/baomat.png", text: "Bảo mật" },
-          { link: "/member/setting", img: "../assets/images/account/thenganhang.png", text: "Quản lý thẻ ngân hàng" },
-          { link: "/member/help", img: "../assets/images/account/gioithieubb.png", text: "Giới thiệu bạn bè" },
+          { link: "/member/security-bank", img: "../assets/images/account/thenganhang.png", text: "Quản lý thẻ ngân hàng" },
+          { link: "/daily", img: "../assets/images/account/gioithieubb.png", text: "Giới thiệu bạn bè" },
 
           { link: "/khuyenmai", img: "../assets/images/account/khuyenmai2.png", text: "Khuyến mãi" },
 
@@ -80,8 +80,6 @@ const TaiKhoanLayout = () => {
           </Link>
         ))}
       </div>
-
-      <div className="navbar"></div>
     </div>
   );
 };

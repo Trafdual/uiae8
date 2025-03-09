@@ -14,6 +14,12 @@ import AboutMe from '../Layout/TaiKhoanLayout/Setting/VeChungToi/VeChungToi'
 import TroGiup from '../Layout/TaiKhoanLayout/Setting/TroGiup/TroGiup'
 import ChinhSach from '../Layout/TaiKhoanLayout/Setting/ChinhSach/ChinhSach'
 import MatchDetails from '../Layout/TrangChuLayout/MatchDetails/MatchDetails'
+import BankInfoUpdate from '../Layout/TaiKhoanLayout/BankInfoUpdate/BankInfoUpdate'
+import SecurityAccount from '../Layout/TaiKhoanLayout/SecurityAccount/SecurityAccount'
+import UpdatePhone from '../Layout/TaiKhoanLayout/SecurityAccount/UpdatePhone/UpdatePhone'
+import UpdateVi from '../Layout/TaiKhoanLayout/SecurityAccount/UpdateVi/UpdateVi'
+import UpdatePass from '../Layout/TaiKhoanLayout/SecurityAccount/UpdatePass/UpdatePass'
+import UpdatePassMoney from '../Layout/TaiKhoanLayout/SecurityAccount/UpdatePassMoney/UpdatePassMoney'
 const publicRoutes = [
   {
     path: '/login',
@@ -80,6 +86,30 @@ const publicRoutes = [
   {
     path: '/member/setting/help',
     component: TroGiup
+  },
+  {
+    path: '/member/security-bank',
+    component: BankInfoUpdate
+  },
+  {
+    path: '/member/security',
+    component: SecurityAccount
+  },
+  {
+    path: '/member/security/security-phone',
+    component: UpdatePhone
+  },
+  {
+    path: '/member/security/security-bep',
+    component: UpdateVi
+  },
+  {
+    path: '/member/security/security-pass',
+    component: UpdatePass
+  },
+  {
+    path: '/member/security/security-password-withdrawal',
+    component: UpdatePassMoney
   }
   
 ]
