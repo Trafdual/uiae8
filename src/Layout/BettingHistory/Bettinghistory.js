@@ -13,9 +13,9 @@ const gameStatuses = [
 const GameStatusDropdown = () => (
   <div class="dropdown-container">
           <div class="dropdown-container-l">
-            <label for="status-dropdown" class="status-label">
+            <div className="status-label-trangthai">
               Trạng thái
-            </label>
+            </div>
             <select id="status-dropdown">
               <option value="member/bet-history">Đang xử lý</option>
               <option value="member/bet-history-done" selected="">Đã hoàn thành</option>

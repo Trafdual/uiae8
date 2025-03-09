@@ -3,6 +3,7 @@ import './Register.scss'
 import { ModalCapCha } from '../LoginLayout/ModalCapCha'
 import { Loading } from '../../component/Loading'
 import { getApiUrl } from '../../api'
+import { Link } from 'react-router-dom'
 import Notification from '../../component/Notification/Notifition'
 const RegisterLayout = () => {
   const [ispassword, setispassword] = useState(true)
@@ -73,24 +74,24 @@ const RegisterLayout = () => {
 
   return (
     <>
-      <div class='register-container'>
-        <div class='register-header'>
-          <a href='../trangchu/trangchu.html'>
-            <div class='btn-right'>
-              <img src='/assets/images/btn-close.png' alt="" class='btn-close' />
+      <div className='register-container'>
+        <div className='register-header'>
+          <Link to='/'>
+            <div className='btn-right'>
+              <img src='/assets/images/btn-close.png' alt="" className='btn-close' />
             </div>
-          </a>
-          <div class='top-img'>
+          </Link>
+          <div className='top-img'>
             <img src='/assets/images/top-img.png' alt="" />
           </div>
         </div>
 
-        <div class='register-form'>
-          <div class='register-input-field'>
-            <label for='username'>
+        <div className='register-form'>
+          <div className='register-input-field'>
+            <div className='labelreg'>
               <img src='/assets/images/account.png' alt="" />
               Tên đăng nhập
-            </label>
+            </div>
             <input
               type='text'
               id='username'
@@ -101,11 +102,11 @@ const RegisterLayout = () => {
             />
             <small>Vui lòng nhập tên đăng nhập</small>
           </div>
-          <div class='register-input-field'>
-            <label for='password'>
+          <div className='register-input-field'>
+            <div className='labelreg'>
               <img src='/assets/images/register-pass.png' alt="a" />
               Mật khẩu
-            </label>
+            </div>
             <input
               type={ispassword ? 'password' : 'text'}
               id='password'
@@ -121,16 +122,16 @@ const RegisterLayout = () => {
                   : '/assets/images/hidepass2.png'
               }
               alt='Show/Hide'
-              class='toggle-password'
+              className='toggle-password'
               onClick={() => setispassword(!ispassword)}
             />
             <small>Vui lòng nhập mật khẩu</small>
           </div>
-          <div class='register-input-field'>
-            <label for='confirm-password'>
+          <div className='register-input-field'>
+            <div className='labelreg'>
               <img src={'/assets/images/register-pass.png'} alt='' />
               Xác nhận lại mật khẩu
-            </label>
+            </div>
             <input
               type={isRepassword ? 'password' : 'text'}
               id='confirm-password'
@@ -146,16 +147,16 @@ const RegisterLayout = () => {
                   : '/assets/images/hidepass2.png'
               }
               alt='Show/Hide'
-              class='toggle-password'
+              className='toggle-password'
               onClick={() => setisRepassword(!isRepassword)}
             />
             <small>Vui lòng nhập lại mật khẩu.</small>
           </div>
-          <div class='register-input-field'>
-            <label for='email'>
+          <div className='register-input-field'>
+            <div className='labelreg'>
               <img src='/assets/images/account.png' alt="" />
               Mã mời
-            </label>
+            </div>
             <input
               type='email'
               id='email'
@@ -168,7 +169,7 @@ const RegisterLayout = () => {
           </div>
           <button
             type='submit'
-            class='register-btn'
+            className='register-btn'
             onClick={() => {
               if (validate()) {
                 setisModalCapcha(true)

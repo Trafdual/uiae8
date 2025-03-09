@@ -38,14 +38,14 @@ const BankInfoUpdate = () => {
                 <form onSubmit={handleSubmit}>
                     <div className="security-bank-input">
                         <div className="bank-form-group">
-                            <label htmlFor="select-bank">Chọn ngân hàng (<span>*</span>)</label>
+                            {/* <label htmlFor="select-bank">Chọn ngân hàng (<span>*</span>)</label> */}
                             <select id="select-bank" required value={bank} onChange={(e) => setBank(e.target.value)}>
                                 <option value="" disabled>Chọn ngân hàng</option>
                                 <option value="nhnn">Ngân hàng nhà nước (NHNN)</option>
                             </select>
                         </div>
                         <div className="bank-form-group">
-                            <label htmlFor="number-account">Số tài khoản (<span>*</span>)</label>
+                            {/* <label htmlFor="number-account">Số tài khoản (<span>*</span>)</label> */}
                             <input 
                                 type="text" 
                                 id="number-account" 
@@ -56,7 +56,7 @@ const BankInfoUpdate = () => {
                             />
                         </div>
                         <div className="bank-form-group">
-                            <label htmlFor="owner-acc">Chủ tài khoản (<span>*</span>)</label>
+                           
                             <input 
                                 type="text" 
                                 id="owner-acc" 
