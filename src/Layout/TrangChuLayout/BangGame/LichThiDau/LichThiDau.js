@@ -61,10 +61,10 @@ const LichThiDau = () => {
 const fetchImages = async matches => {
   for (const item of matches) {
     try {
-      const homeUrl = `http://localhost:8080/proxy?url=${encodeURIComponent(
+      const homeUrl = `https://demoaeviet.shop/proxy?url=${encodeURIComponent(
         getApiUrl('linkanh') + '/' + item.homeIcon
       )}`
-      const awayUrl = `http://localhost:8080/proxy?url=${encodeURIComponent(
+      const awayUrl = `https://demoaeviet.shop/proxy?url=${encodeURIComponent(
         getApiUrl('linkanh') + '/' + item.awayIcon
       )}`
 
