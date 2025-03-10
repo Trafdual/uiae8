@@ -138,13 +138,23 @@ const Tabs = ({ idtab, setidtab }) => {
 }
 
 const ScorePredictions = ({ openModal, data }) => {
+  const handelgamekey = gamekey => {
+    console.log(gamekey)
+  }
   return (
     <div className='bodynghich'>
-      {Object.entries(data).map(([index, item]) => (
+      {Object.entries(data).map(([gamekey, item]) => (
         <div
-          key={index}
+          key={gamekey}
           className='item-nghich'
-          onClick={!item.locked ? openModal : null}
+          onClick={
+            !item.locked
+              ? () => {
+                  handelgamekey()
+                  openModal()
+                }
+              : null
+          }
         >
           <p>{item.name}</p>
           {item.locked ? (

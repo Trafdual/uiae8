@@ -41,8 +41,9 @@ const LichThiDau = () => {
         `${getApiUrl('searchtrantheongay')}?date=${activeDate}`
       )
       const data = await response.json()
-      if (data.message) {
-        console.log(data.message)
+      if (data.error) {
+        console.log(data.error)
+        
       } else {
         setData(data)
 
