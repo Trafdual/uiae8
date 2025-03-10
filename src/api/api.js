@@ -7,6 +7,8 @@ const encryptedApis = {
   withdraw: process.env.REACT_APP_API_POST_WITHDRAW,
   chitiettran: process.env.REACT_APP_API_CHITIETTRAN,
   keochitiet: process.env.REACT_APP_API_KEOCHITIET,
+  betinfo:process.env.REACT_APP_API_BETINFO,
+  datcuoc:process.env.REACT_APP_API_DATCUOC
 }
 
 export const getApiUrl = key => {
