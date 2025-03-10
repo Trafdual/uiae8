@@ -1,8 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import "./VeChungToi.scss";
-
 const AboutMe = () => {
+  const [content, setContent] = useState("");
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:8080/pages/ve-chung-toi"
+        );
+        setContent(response.data.content);
+      } catch (error) {
+        console.error("Lỗi khi lấy dữ liệu:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div className="about-me-container">
       <div className="about-me-header">
@@ -13,19 +30,8 @@ const AboutMe = () => {
         </Link>
         <div className="about-me-text">Về chúng tôi</div>
       </div>
-
       <div className="about-me-content">
-        {[
-          `AE8 - Thách thức mọi giới hạn`,
-          `AE8 tự hào là một trong những nền tảng game uy tín, chất lượng cao và được yêu thích hàng đầu tại Việt Nam. Với hàng nghìn người chơi đã đăng ký, AE8 không ngừng khẳng định vị thế tiên phong bằng sự an toàn, tiện lợi và trải nghiệm tuyệt vời cho khách hàng.`,
-          `Trò Chơi Hấp Dẫn, Tương Thích Mọi Thiết Bị`,
-          `Tại AE8, mọi khách hàng đều được tận hưởng những trò chơi giải trí phong phú, tỷ lệ cược cao cùng trải nghiệm mượt mà trên tất cả các thiết bị. Chỉ cần vài thao tác đơn giản, bạn có thể tham gia mọi lúc, mọi nơi mà không bị giới hạn.`,
-          `Hệ Thống Thanh Toán Nhanh Chóng và An Toàn`,
-        ].map((paragraph, index) => (
-          <div key={index} className="para-about-me">
-            {paragraph}
-          </div>
-        ))}
+      <div dangerouslySetInnerHTML={{ __html: content }} />
       </div>
     </div>
   );
